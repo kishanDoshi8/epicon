@@ -6,6 +6,7 @@ body, html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Hind", sans-serif;
+  background-color: #051F40;
   overflow-x: hidden; }
 
 img {
@@ -105,3 +106,89 @@ nav {
           font-weight: 600; }
         nav .toggle-menu .menu-items ul a:hover {
           color: #29FF99; }
+
+section.hero {
+  position: relative; }
+  section.hero .slider {
+    height: 100vh;
+    width: 100%; }
+    section.hero .slider .slide {
+      position: absolute;
+      width: 100%;
+      clip-path: circle(0% at 95% 10%);
+      transition: clip-path 0.5s ease-in-out;
+      z-index: 1; }
+      section.hero .slider .slide.active {
+        clip-path: circle(150% at 95% 10%); }
+      section.hero .slider .slide img {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100vh; }
+      section.hero .slider .slide .info {
+        position: absolute;
+        top: 50%;
+        left: 6rem;
+        transform: translateY(-50%);
+        z-index: 5; }
+        section.hero .slider .slide .info .title {
+          font-size: 5rem;
+          color: white;
+          font-family: "Cinzel", sans-serif; }
+        section.hero .slider .slide .info .desc {
+          font-size: 2rem;
+          color: white;
+          max-width: 700px; }
+        section.hero .slider .slide .info .cta-btn {
+          position: relative;
+          display: table;
+          margin-top: 4rem;
+          padding: 0.5rem 2.5rem;
+          cursor: pointer;
+          color: #29FF99;
+          font-weight: 600;
+          font-size: 1.5rem;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          background-color: #051F40;
+          border-radius: 50px; }
+          section.hero .slider .slide .info .cta-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: calc(100% + 5px);
+            width: calc(100% + 5px);
+            transform: translate(-2.5px, -2.5px);
+            background: linear-gradient(#35B8E8, #051F40, #29FF99);
+            border-radius: 50px;
+            z-index: -1;
+            filter: blur(7px); }
+          section.hero .slider .slide .info .cta-btn:hover::after {
+            animation: rotate-hue 1.5s linear infinite; }
+    section.hero .slider .navigation {
+      position: absolute;
+      z-index: 2;
+      right: 10%;
+      bottom: 4rem;
+      display: flex;
+      gap: 3rem; }
+      section.hero .slider .navigation .slide-nav {
+        height: 1rem;
+        width: 1rem;
+        background-color: rgba(53, 184, 232, 0.7);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in; }
+        section.hero .slider .navigation .slide-nav.active {
+          background-color: #29FF99; }
+
+.overflow {
+  height: 1000px;
+  width: 100%; }
+
+@keyframes rotate-hue {
+  0% {
+    filter: hue-rotate(0deg); }
+  100% {
+    filter: hue-rotate(360deg); } }

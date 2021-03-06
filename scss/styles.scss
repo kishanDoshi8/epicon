@@ -1,4 +1,5 @@
 @import 'config';
+@import 'utilities';
 
 body, html {
     padding: 0;
@@ -156,7 +157,7 @@ section.hero {
             position: absolute;
             width: 100%;
             clip-path: circle(0% at 95% 10%);
-            transition: clip-path 0.5s ease-in-out;
+            transition: clip-path 1s ease-in-out;
             z-index: 1;
 
             &.active {
@@ -178,9 +179,10 @@ section.hero {
                 z-index: 5;
     
                 .title {
-                    font-size: 5rem;
+                    font-size: 4rem;
                     color: white;
                     font-family: $font-title;
+                    max-width: 800px;
                 }
     
                 .desc {
@@ -300,6 +302,47 @@ section.hero {
                 &.active {
                     background-color: $accent-color;
                 }
+            }
+        }
+    }
+}
+
+section.values {
+    position: relative;
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $dark-color;
+
+    .value-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        margin: 3rem;
+        padding-bottom: 3rem;
+        border-bottom: solid 2px rgba($secondary-color, 1);
+
+        &-image {
+            padding: 4rem;
+        }
+
+        &-info {
+            color: $primary-color;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            // align-items: center;
+            text-align: center;
+
+            &-title {
+                font-size: 3rem;
+            }
+
+            &-desc {
+                font-size: 1.5rem;
+                margin-top: 2rem;
+                padding: 2rem;
             }
         }
     }

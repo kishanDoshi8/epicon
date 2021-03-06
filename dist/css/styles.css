@@ -8,9 +8,11 @@
 
 .section-title {
   position: relative;
+  display: table;
   font-size: 5rem;
   color: #29FF99;
-  text-align: center; }
+  text-align: center;
+  margin: 0 auto; }
   .section-title::after {
     content: '';
     position: absolute;
@@ -233,6 +235,90 @@ section.values {
         font-size: 1.5rem;
         margin-top: 2rem;
         padding: 2rem; }
+
+section.reviews {
+  position: relative;
+  padding-top: 10rem; }
+  section.reviews .reviews-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    margin: 3rem;
+    margin-top: 10rem;
+    box-sizing: border-box; }
+    section.reviews .reviews-container .review-card {
+      position: relative;
+      padding: 3rem;
+      text-align: center;
+      background-color: #0E1B26;
+      transition: all 0.3s ease;
+      color: #35B8E8;
+      -webkit-box-shadow: 10px 10px 20px 0px rgba(5, 31, 64, 0.75);
+      -moz-box-shadow: 10px 10px 20px 0px rgba(5, 31, 64, 0.75);
+      box-shadow: 10px 10px 20px 0px rgba(5, 31, 64, 0.75); }
+      section.reviews .reviews-container .review-card:hover {
+        background-color: #35B8E8;
+        color: #051F40;
+        -webkit-box-shadow: 10px 10px 20px 0px rgba(53, 184, 232, 0.75);
+        -moz-box-shadow: 10px 10px 20px 0px rgba(53, 184, 232, 0.75);
+        box-shadow: 10px 10px 20px 0px rgba(53, 184, 232, 0.75); }
+      section.reviews .reviews-container .review-card-image {
+        position: absolute;
+        height: 250px;
+        width: 250px;
+        object-fit: cover;
+        top: 0%;
+        left: 50%;
+        border-radius: 50%;
+        overflow: hidden;
+        transform: translate(-50%, -30%);
+        z-index: 1; }
+        section.reviews .reviews-container .review-card-image img {
+          width: 250px;
+          height: 80%;
+          object-fit: cover; }
+      section.reviews .reviews-container .review-card-text {
+        margin-top: 6rem;
+        transition: 0.3s; }
+        section.reviews .reviews-container .review-card-text-quote {
+          font-size: 1.5rem; }
+        section.reviews .reviews-container .review-card-text-name {
+          font-size: 2rem;
+          margin: 0; }
+        section.reviews .reviews-container .review-card-text-title {
+          font-size: 1.5rem;
+          margin: 0;
+          text-transform: uppercase; }
+      section.reviews .reviews-container .review-card::before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        width: 80px;
+        height: 80px;
+        background: url(../resources/quote-right.png);
+        background-size: cover;
+        opacity: 0.5;
+        pointer-events: none;
+        transition: 0.5s; }
+      section.reviews .reviews-container .review-card::after {
+        content: '';
+        position: absolute;
+        bottom: 20px;
+        left: 30px;
+        width: 80px;
+        height: 80px;
+        background: url(../resources/quote-left.png);
+        background-size: cover;
+        opacity: 0.5;
+        pointer-events: none;
+        transition: 0.5s; }
+      section.reviews .reviews-container .review-card:hover::before {
+        opacity: 1;
+        transform: translateY(-50px); }
+      section.reviews .reviews-container .review-card:hover::after {
+        opacity: 1;
+        transform: translateY(50px); }
 
 .overflow {
   height: 1000px;

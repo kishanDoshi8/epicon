@@ -7,9 +7,11 @@
 
 .section-title {
     position: relative;
+    display: table;
     font-size: 5rem;
     color: $accent-color;
     text-align: center;
+    margin: 0 auto;
     
     &::after {
         content: '';

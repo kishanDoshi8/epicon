@@ -1,0 +1,147 @@
+@import 'config';
+
+body, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: $font-family;
+    // background-color: $secondary-color;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: $primary-color;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    
+    .brand {
+        padding: 2rem;
+        margin: 2rem;
+        display: flex;
+        gap: 1rem;
+
+        &-logo {
+            font-size: 3rem;
+            color: $primary-color !important;
+        }
+
+        &-name {
+            font-size: 3rem;
+            color: $primary-color;
+            margin-left: 1rem;
+        }
+    }
+
+    .toggle-menu {
+        position: relative;
+        cursor: pointer;
+        padding: 2rem;
+        margin: 2rem;
+
+        .hamburger-menu {
+            position: relative;
+            width: 50px;
+            height: 5px;
+            background-color: $primary-color;
+            border-radius: 5px;
+            transition: all 0.5s ease-in-out;
+
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                width: 50px;
+                height: 5px;
+                background-color: $primary-color;
+                border-radius: 5px;
+                transition: all 0.5s ease-in-out;
+            }
+
+            &::before {
+                transform: translateY(-16px);
+            }
+
+            &::after {
+                transform: translateY(16px);
+            }
+        }
+
+        &.active .hamburger-menu {
+            transform: translateX(50px);
+            background: transparent;
+
+            &::before {
+                transform: rotate(-45deg) translate(-35px, -35px);
+            }
+
+            &::after {
+                transform: rotate(45deg) translate(-35px, 35px);
+            }
+        }
+
+        .menu-items {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: $secondary-color;
+            z-index: -1;
+            transition: all 0.5s ease-out;
+            clip-path: polygon(0 0, 100% 0, 100% 95%, 0 95%);
+
+            &.open {
+                background-color: $secondary-color;
+                height: 600px;
+                width: 600px;
+
+                ul {
+                    height: auto;
+                }
+            }
+            
+            ul {
+                position: absolute;
+                overflow: hidden;
+                height: 0;
+                top: 55%;
+                right: 55%;
+                transform: translate(50%, 0%);
+
+                li {
+                    font-size: 2rem;
+                    text-align: end;
+                    font-weight: 600;
+                }
+
+                a:hover {
+                    color: $accent-color;
+                }
+            }
+        }
+    }
+}

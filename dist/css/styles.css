@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap");
+body, html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Hind", sans-serif;
+  overflow-x: hidden; }
+
+img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+li {
+  list-style: none;
+  margin: 0; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #35B8E8; }
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; }
+  nav .brand {
+    padding: 2rem;
+    margin: 2rem;
+    display: flex;
+    gap: 1rem; }
+    nav .brand-logo {
+      font-size: 3rem;
+      color: #35B8E8 !important; }
+    nav .brand-name {
+      font-size: 3rem;
+      color: #35B8E8;
+      margin-left: 1rem; }
+  nav .toggle-menu {
+    position: relative;
+    cursor: pointer;
+    padding: 2rem;
+    margin: 2rem; }
+    nav .toggle-menu .hamburger-menu {
+      position: relative;
+      width: 50px;
+      height: 5px;
+      background-color: #35B8E8;
+      border-radius: 5px;
+      transition: all 0.5s ease-in-out; }
+      nav .toggle-menu .hamburger-menu::before, nav .toggle-menu .hamburger-menu::after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 5px;
+        background-color: #35B8E8;
+        border-radius: 5px;
+        transition: all 0.5s ease-in-out; }
+      nav .toggle-menu .hamburger-menu::before {
+        transform: translateY(-16px); }
+      nav .toggle-menu .hamburger-menu::after {
+        transform: translateY(16px); }
+    nav .toggle-menu.active .hamburger-menu {
+      transform: translateX(50px);
+      background: transparent; }
+      nav .toggle-menu.active .hamburger-menu::before {
+        transform: rotate(-45deg) translate(-35px, -35px); }
+      nav .toggle-menu.active .hamburger-menu::after {
+        transform: rotate(45deg) translate(-35px, 35px); }
+    nav .toggle-menu .menu-items {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      background-color: #051F40;
+      z-index: -1;
+      transition: all 0.5s ease-out;
+      clip-path: polygon(0 0, 100% 0, 100% 95%, 0 95%); }
+      nav .toggle-menu .menu-items.open {
+        background-color: #051F40;
+        height: 600px;
+        width: 600px; }
+        nav .toggle-menu .menu-items.open ul {
+          height: auto; }
+      nav .toggle-menu .menu-items ul {
+        position: absolute;
+        overflow: hidden;
+        height: 0;
+        top: 55%;
+        right: 55%;
+        transform: translate(50%, 0%); }
+        nav .toggle-menu .menu-items ul li {
+          font-size: 2rem;
+          text-align: end;
+          font-weight: 600; }
+        nav .toggle-menu .menu-items ul a:hover {
+          color: #29FF99; }

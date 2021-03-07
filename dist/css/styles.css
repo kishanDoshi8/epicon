@@ -131,7 +131,35 @@ nav {
           color: #29FF99; }
 
 section.hero {
-  position: relative; }
+  position: relative;
+  z-index: 1; }
+  section.hero .cta-btn {
+    position: relative;
+    display: table;
+    margin-top: 4rem;
+    padding: 0.5rem 2.5rem;
+    cursor: pointer;
+    color: #29FF99;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: #051F40;
+    border-radius: 50px; }
+    section.hero .cta-btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: calc(100% + 10px);
+      width: calc(100% + 10px);
+      transform: translate(-5px, -5px);
+      background: linear-gradient(#35B8E8, #051F40, #29FF99);
+      border-radius: 50px;
+      z-index: -1;
+      filter: blur(7px); }
+    section.hero .cta-btn:hover::after {
+      animation: rotate-hue 1.5s linear infinite; }
   section.hero .slider {
     height: 100vh;
     width: 100%; }
@@ -163,33 +191,6 @@ section.hero {
           font-size: 2rem;
           color: white;
           max-width: 700px; }
-        section.hero .slider .slide .info .cta-btn {
-          position: relative;
-          display: table;
-          margin-top: 4rem;
-          padding: 0.5rem 2.5rem;
-          cursor: pointer;
-          color: #29FF99;
-          font-weight: 600;
-          font-size: 1.5rem;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          background-color: #051F40;
-          border-radius: 50px; }
-          section.hero .slider .slide .info .cta-btn::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: calc(100% + 5px);
-            width: calc(100% + 5px);
-            transform: translate(-2.5px, -2.5px);
-            background: linear-gradient(#35B8E8, #051F40, #29FF99);
-            border-radius: 50px;
-            z-index: -1;
-            filter: blur(7px); }
-          section.hero .slider .slide .info .cta-btn:hover::after {
-            animation: rotate-hue 1.5s linear infinite; }
     section.hero .slider .navigation {
       position: absolute;
       z-index: 2;
@@ -320,9 +321,160 @@ section.reviews {
         opacity: 1;
         transform: translateY(50px); }
 
+section.demo {
+  position: relative;
+  margin-top: 8rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background-color: #0E1B26;
+  z-index: 1; }
+  section.demo .cta-btn {
+    position: relative;
+    display: table;
+    margin-top: 4rem;
+    padding: 0.5rem 2.5rem;
+    cursor: pointer;
+    color: #29FF99;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: #051F40;
+    border-radius: 50px; }
+    section.demo .cta-btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: calc(100% + 10px);
+      width: calc(100% + 10px);
+      transform: translate(-5px, -5px);
+      background: linear-gradient(#35B8E8, #051F40, #29FF99);
+      border-radius: 50px;
+      z-index: -1;
+      filter: blur(7px); }
+    section.demo .cta-btn:hover::after {
+      animation: rotate-hue 1.5s linear infinite; }
+  section.demo .video-audio-container {
+    display: flex;
+    gap: 1rem; }
+  section.demo .video-overlay {
+    position: relative;
+    z-index: 1;
+    width: 60vw;
+    margin: 4rem auto; }
+    section.demo .video-overlay::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      bottom: -10px;
+      right: -20px;
+      border: solid 3px #29FF99;
+      z-index: -1; }
+    section.demo .video-overlay video {
+      object-fit: cover;
+      width: 100%;
+      height: 100%; }
+    section.demo .video-overlay .overlay {
+      position: absolute;
+      mix-blend-mode: overlay;
+      background: rgba(53, 184, 232, 0.8);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 99%;
+      transition: 0.3s; }
+    section.demo .video-overlay .cursor {
+      display: none; }
+    section.demo .video-overlay:hover .overlay {
+      background-color: transparent; }
+    section.demo .video-overlay:hover .cursor {
+      display: block;
+      position: fixed;
+      z-index: 100;
+      width: 100px;
+      height: 100px;
+      background-color: transparent;
+      border: solid 2px #29FF99;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.15s;
+      cursor: none; }
+      section.demo .video-overlay:hover .cursor i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        color: #29FF99;
+        transition: all 0.2s ease; }
+  section.demo .info {
+    position: absolute;
+    top: 30%;
+    left: -50px;
+    transform: translateY(-50%); }
+    section.demo .info .title {
+      font-size: 4rem;
+      color: white;
+      font-family: "Cinzel", sans-serif;
+      font-weight: 600; }
+  section.demo .speakers {
+    margin-top: auto;
+    margin-bottom: 2rem;
+    z-index: 5;
+    cursor: pointer; }
+    section.demo .speakers img {
+      height: 200px;
+      width: auto; }
+    section.demo .speakers-left {
+      right: 10%; }
+    section.demo .speakers-right {
+      left: 10%; }
+    section.demo .speakers.on {
+      animation: speakerOn 0.5s linear infinite; }
+    section.demo .speakers.off {
+      animation: speakerOff 4s linear infinite; }
+  section.demo .section-sub-title {
+    color: #35B8E8;
+    font-weight: 600;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 6rem; }
+  section.demo .cta-btn {
+    margin: auto;
+    margin-top: 4rem;
+    font-size: 3rem; }
+
 .overflow {
   height: 1000px;
   width: 100%; }
+
+@keyframes speakerOn {
+  0% {
+    transform: scale(1); }
+  70% {
+    transform: scale(1.05); }
+  80% {
+    transform: scale(1.1); }
+  90% {
+    transform: scale(1.15); }
+  100% {
+    transform: scale(1.1); } }
+
+@keyframes speakerOff {
+  0% {
+    transform: translateX(0px); }
+  85% {
+    transform: translateX(5px); }
+  90% {
+    transform: translateX(-10px); }
+  95% {
+    transform: translateX(5px); }
+  99% {
+    transform: translateX(-5px); }
+  100% {
+    transform: translateX(0px); } }
 
 @keyframes rotate-hue {
   0% {

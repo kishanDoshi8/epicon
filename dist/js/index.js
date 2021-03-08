@@ -77,9 +77,9 @@ slideNavs.forEach((nav, i) => {
 })
 
 slideTo(0);
-// setInterval(() => {
-//     slideTo(++currentSlide);
-// }, 10000);
+setInterval(() => {
+    slideTo(++currentSlide);
+}, 10000);
 
 // Demo section
 videoOverlay.addEventListener('mouseover', () => {

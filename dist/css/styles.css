@@ -511,7 +511,7 @@ section.demo {
     font-size: 3rem; }
 
 footer {
-  margin: 6rem 2rem; }
+  margin: 6rem 2rem 0 2rem; }
   footer .company {
     position: relative;
     display: flex;
@@ -551,6 +551,27 @@ footer {
         margin-bottom: 1rem; }
       footer .company-info-title {
         font-size: 1.5rem; }
+  footer .copy-rights {
+    padding: 2rem 1rem;
+    margin: 2rem;
+    margin-bottom: 0;
+    border-top: 0.75px solid #35B8E8;
+    color: #35B8E8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    footer .copy-rights .scroll-btn #scroll-to-top-btn {
+      background-color: transparent;
+      color: #35B8E8;
+      font-size: 4rem;
+      padding-bottom: 0.5rem;
+      border: none;
+      margin: 0;
+      outline: none;
+      cursor: pointer;
+      transition: 0.3s; }
+      footer .copy-rights .scroll-btn #scroll-to-top-btn:hover {
+        transform: translateY(-1rem); }
 
 .overflow {
   height: 1000px;

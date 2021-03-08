@@ -510,7 +510,7 @@ section.demo {
 }
 
 footer {
-    margin: 6rem 2rem;
+    margin: 6rem 2rem 0 2rem;
 
     .company {
         position: relative;
@@ -568,6 +568,36 @@ footer {
 
             &-title {
                 font-size: 1.5rem;
+            }
+        }
+    }
+
+    .copy-rights {
+        padding: 2rem 1rem;
+        margin: 2rem;
+        margin-bottom: 0;
+        border-top: 0.75px solid $primary-color;
+        color: $primary-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .scroll-btn {
+
+            #scroll-to-top-btn {
+                background-color: transparent;
+                color: $primary-color;
+                font-size: 4rem;
+                padding-bottom: 0.5rem;
+                border: none;
+                margin: 0;
+                outline: none;
+                cursor: pointer;
+                transition: 0.3s;
+
+                &:hover {
+                    transform: translateY(-1rem);
+                }
             }
         }
     }

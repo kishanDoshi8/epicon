@@ -14,6 +14,8 @@ const videoOverlay = document.querySelector('.video-overlay');
 const video =  document.querySelector('video');
 const cursor = document.querySelector('.cursor');
 const speakers = document.querySelectorAll('.speakers');
+// Footer section
+const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
 
 // Nav toggle and animations
 toggleMenu.addEventListener('click', () => {
@@ -135,3 +137,8 @@ const turnOffAudio = () => {
         speaker.classList.add('off');
     })
 }
+
+// Scrool to top btn
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo(0,0);
+})

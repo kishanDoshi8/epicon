@@ -96,14 +96,19 @@
                 grid-area: speakers;
                 margin: auto;
 
+                img {
+                    height: 150px;
+                    width: auto;
+                }
+
                 &-left {
                     position: relative;
-                    right: 150px;
+                    right: 8rem;
                 }
 
                 &-right {
                     position: relative;
-                    left: 150px;
+                    left: 8rem;
                 }
             }
 
@@ -111,6 +116,10 @@
                 grid-area: video;
                 width: 80vw !important;
             }
+        }
+
+        .info {
+            left : 1rem !important;
         }
     }
 

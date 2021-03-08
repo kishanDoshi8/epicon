@@ -73,15 +73,20 @@
       position: relative;
       grid-area: speakers;
       margin: auto; }
+      section.demo .video-audio-container .speakers img {
+        height: 150px;
+        width: auto; }
       section.demo .video-audio-container .speakers-left {
         position: relative;
-        right: 150px; }
+        right: 8rem; }
       section.demo .video-audio-container .speakers-right {
         position: relative;
-        left: 150px; }
+        left: 8rem; }
     section.demo .video-audio-container .video-overlay {
       grid-area: video;
       width: 80vw !important; }
+  section.demo .info {
+    left: 1rem !important; }
   footer .company {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr);

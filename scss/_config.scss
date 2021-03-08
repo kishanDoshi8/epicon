@@ -7,3 +7,28 @@ $accent-color: #29FF99;
 $dark-color: #0E1B26;
 $font-family: 'Hind', sans-serif;
 $font-title: 'Cinzel', sans-serif;
+
+// Media Mixins
+@mixin mediaSm {
+    @media screen and (max-width: 501px) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (max-width: 1100px) {
+        @content;
+    }
+}
+
+// @mixin mediaXl {
+//     @media screen and (min-width: 1101px) {
+//         @content;
+//     }
+// }

@@ -23,6 +23,71 @@
     height: 100%;
     border-bottom: solid 2px rgba(41, 255, 153, 0.7); }
 
+@media screen and (max-width: 1100px) {
+  html {
+    font-size: 12px; }
+  nav .hamburder-menu {
+    width: 40px; }
+  nav .menu-items {
+    width: 75px !important;
+    height: 75px !important; }
+    nav .menu-items.open {
+      width: 500px !important;
+      height: 500px !important; }
+  section.reviews .review-card-image {
+    height: 150px !important;
+    width: 150px !important;
+    object-fit: cover; }
+    section.reviews .review-card-image img {
+      width: 100% !important; } }
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 10px; }
+  section.hero {
+    text-align: center; }
+    section.hero .slide .info {
+      left: 0 !important;
+      padding: 5rem; }
+  section.values .value-card {
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) !important;
+    grid-template-areas: "value-img" "value-info";
+    margin: 0 !important; }
+    section.values .value-card-image {
+      grid-area: value-img; }
+      section.values .value-card-image img {
+        width: 200px;
+        height: 200px;
+        margin: auto; }
+    section.values .value-card-info {
+      grid-area: value-info; }
+  section.reviews .reviews-container .review-card {
+    margin: 5rem;
+    padding: 5rem !important; }
+  section.demo .video-audio-container {
+    display: grid !important;
+    grid-template-areas: "video" "speakers"; }
+    section.demo .video-audio-container .speakers {
+      position: relative;
+      grid-area: speakers;
+      margin: auto; }
+      section.demo .video-audio-container .speakers-left {
+        position: relative;
+        right: 150px; }
+      section.demo .video-audio-container .speakers-right {
+        position: relative;
+        left: 150px; }
+    section.demo .video-audio-container .video-overlay {
+      grid-area: video;
+      width: 80vw !important; }
+  footer .company {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5rem;
+    gap: 4rem; } }
+
 body, html {
   padding: 0;
   margin: 0;

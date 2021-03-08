@@ -1,0 +1,131 @@
+// Large devices -> Laptops and desktops
+@include mediaLg {
+    html {
+        font-size: 12px;
+    }
+
+    nav {
+        .hamburder-menu {
+            width: 40px;
+        }
+
+        .menu-items {
+            width: 75px !important;
+            height: 75px !important;
+
+            &.open {
+                width: 500px !important;
+                height: 500px !important;
+            }
+        }
+    }
+
+    section.reviews {
+        .review-card {
+            &-image {
+                height: 150px !important;
+                width: 150px !important;
+                object-fit: cover;
+
+                img {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}
+
+// Small devices -> Tablets
+@include mediaMd { 
+    html {
+        font-size: 10px;
+    }
+
+    section.hero {
+        text-align: center;
+
+        .slide {
+            .info {
+                left: 0 !important;
+                padding: 5rem;
+            }
+        }
+    }
+
+    section.values {
+        .value-card {
+            width: 100% !important;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr) !important;
+            grid-template-areas: "value-img""value-info";
+            margin: 0 !important;
+
+            &-image {
+                grid-area: value-img;
+
+                img {
+                    width: 200px;
+                    height: 200px;
+                    margin: auto;
+                }
+            }
+
+            &-info {
+                grid-area: value-info;
+            }
+        }
+    }
+
+    section.reviews {
+        .reviews-container {
+            .review-card {
+                margin: 5rem;
+                padding: 5rem !important;
+            }
+        }
+    }
+
+    section.demo {
+
+        .video-audio-container {
+            display: grid !important;
+            grid-template-areas: "video""speakers";
+
+            .speakers {
+                position: relative;
+                grid-area: speakers;
+                margin: auto;
+
+                &-left {
+                    position: relative;
+                    right: 150px;
+                }
+
+                &-right {
+                    position: relative;
+                    left: 150px;
+                }
+            }
+
+            .video-overlay {
+                grid-area: video;
+                width: 80vw !important;
+            }
+        }
+    }
+
+    footer {
+        .company {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr);
+            margin: 5rem;
+            gap:4rem;
+
+        }
+    }
+}
+
+// Small devices -> smartphones
+@include mediaSm {
+    
+}

@@ -232,7 +232,6 @@ section.values {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
-        margin: 3rem;
         padding-bottom: 3rem;
         border-bottom: solid 2px rgba($secondary-color, 1);
 
@@ -245,7 +244,6 @@ section.values {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            // align-items: center;
             text-align: center;
 
             &-title {
